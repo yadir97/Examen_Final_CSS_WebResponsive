@@ -109,8 +109,6 @@ footer{
 #sub_contenido-1 img{
   width: 80%;
   border-radius: 10px;
-  animation: view_img_prin 2s 0.3s;
-  animation-fill-mode: forwards;
   -webkit-animation: view_img_prin 2s 0.3s;
   -webkit-animation-fill-mode: forwards;
   position: relative;
@@ -127,9 +125,6 @@ footer{
 }
 #sub_contenido-2>div{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  -webkit-display: flex;
   -webkit-flex-direction: row;
   -webkit-justify-content: space-around;
 }
@@ -147,8 +142,6 @@ footer{
 #img_secundaria-2 img{
   width: 70%;
   margin-top: 10px;
-  transition-property: transform;
-  transition-duration: 1s;
   -webkit-transition-property: transform;
   -webkit-transition-duration: 1s;
 }
@@ -156,9 +149,7 @@ footer{
 .footer_contenedor{
   width: 100%;
   display: flex;
-  flex-direction: row;
   border-radius: 0px 0px 10px 10px;
-  -webkit-display: flex;
   -webkit-flex-direction: row;
   -webkit-border-radius: 0px 0px 10px 10px;
   background-color: #C6d5c5;
