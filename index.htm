@@ -6,70 +6,81 @@
     <meta name="author" content="Yadir Aguilar">
     <meta name="description" content="Galeria de fotos">
     <title>Galeria</title>
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <h1>Comenzando con la Fotografía</h1>
-      <nav>
-        <ul>
-          <li>Index</li>
-          <li>Paisaje</li>
-          <li>Retratos</li>
-        </ul>
-      </nav>
-    </header>
-<!--Fin del header-->
+    <div id="main">
+      <header>
+        <div>
+          <h1>Comenzando con la Fotografía</h1>
+          <nav>
+            <ul>
+              <li><a href="#">Index</a></li>
+              <li><a href="#">Paisajes</a></li>
+              <li><a href="#">Retratos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <!--Fin del header-->
+
+  <!--Contenido-->
       <div class="contenedor">
-        <div id="contenido-1"class="">
-          <div class="">
+          <div id="sub_contenido-1"class="">
+              <img src="img/principal.jpg" alt="">
+          </div>
+          <div id="sub_contenido-2">
+            <div>
+                  <div id="img_secundaria-1">
+                      <img src="img/secundaria_1.jpg" alt="">
+                      <h4 style="text-decoration:underline;">Paisaje</h4>
+                  </div>
+                  <div id="img_secundaria-2">
+                      <img src="img/retrato.jpg" alt="">
+                      <h4 style="text-decoration:underline;">Retraro</h4>
+                  </div>
+            </div>
+          </div>
+      </div>
+  <!--Fin del Contenido-->
 
+      <footer>
+        <div class="footer_contenedor">
+          <div class="f_col_contact">
+            <h2>Contacto</h2>
+            <ul>
+              <li>yadir@gmail.com</li>
+              <li>Costa Rica</li>
+              <li>88888888</li>
+            </ul>
+          </div>
+          <div class="f_col_term">
+            <h2>Términos</h2>
+            <ul>
+              <li><p>El diseño responsive es
+                  de caracter obligatorio</p></li>
+            </ul>
+          </div>
+          <div class="f_col_redes">
+            <h2>Redes Sociales</h2>
+            <ul>
+              <li><img src="img/icons/facebook.svg"></img><strong> Facebook</strong></li>
+              <li><img src="img/icons/instagram.svg"></img><strong> Instagram</strong></li>
+              <li><img src="img/icons/snapchat.svg"></img><strong> SnapChat</strong></li>
+            </ul>
+          </div>
+          <div class="f_col_derechos">
+            <h2>Derechos</h2>
+            <ul>
+              <li>Yadir</li>
+              <li>Aguilar</li>
+              <li>©2018</li>
+            </ul>
           </div>
         </div>
-
-        <div class="contenido-2">
-          <div class="sub_contenido-2">
-            <div class="sencundaria_1">
-
-            </div>
-            <div class="secundaria_2">
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-<!--Fin del contenido-->
-    <footer>
-      <div class="">
-        <div class="f_col_contact">
-          <h2>Contacto</h2>
-          <ul>
-            <li>yadir@gmail.com</li>
-            <li>Costa Rica</li>
-            <li>88888888</li>
-          </ul>
-        </div>
-        <div class="f_col_term">
-          <h2>Términos</h2>
-          <ul>
-            <li><p>El diseño responsive es
-                de caracter obligatorio</p></li>
-          </ul>
-        </div>
-        <div class="f_col_redes">
-          <h2>Redes Sociales</h2>
-          <ul>
-            <li><img></img>Facebook</li>
-            <li><img></img>Instagram</li>
-            <li><img></img>SnapChat</li>
-          </ul>
-        </div>
-        <div class="Fcol_4">
-
-        </div>
-      </div>
-    </footer>
-
+      </footer>
+    </div> 
   </body>
 </html>
