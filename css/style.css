@@ -1,6 +1,7 @@
 body{
   padding: 20px;
   font-family: verdana;
+
 }
 
 header{
@@ -10,6 +11,8 @@ header{
   border-radius: 10px 10px 0px 0px;
   animation: header_animation 1.5s;
   animation-fill-mode: forwards;
+  -webkit-animation: header_animation 1.5s;
+  -webkit-animation-fill-mode: forwards;
 }
 header div{
   padding: 10px;
@@ -32,10 +35,8 @@ header nav ul li{
   padding: 5px;
   transition-property: background-color;
   transition-duration: 0.3s;
-}
-
-nav ul li:nth-child(1){
-  background-color:   #409FC5;
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: 0.3s;
 }
 
 a{
@@ -46,15 +47,59 @@ footer{
   width:100%;
 }
 
-#main{
-  max-width: 900px;
-}
+
 .contenedor{
   width: 100%;
   display: flex;
   flex-direction: column;
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+
+}
+.contenedor_retratos{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  -webkit-display: flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  background-color: #d5c75f;
+}
+.retrato{
+  width:30%;
+  margin: 10px;
+  text-align: center;
+}
+.retrato>img{
+  width: 80%;
+}
+.contenedor_paisajes{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  -webkit-display: flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  background-color: #d5c75f;
+}
+.contenedor_paisajes>div{
+  text-align: center;
+}
+.paisaje{
+  width:30%;
+  margin: 10px;
+}
+
+.paisaje>img{
+  width: 80%;
+}
+#main{
+  max-width: 900px;
 }
 #sub_contenido-1{
+  position: relative;
   background-color: #82c3a6;
   text-align: center;
   padding: 10px;
@@ -64,12 +109,16 @@ footer{
 #sub_contenido-1 img{
   width: 80%;
   border-radius: 10px;
-  animation: view_img_prin 2s;
+  animation: view_img_prin 2s 0.3s;
   animation-fill-mode: forwards;
+  -webkit-animation: view_img_prin 2s 0.3s;
+  -webkit-animation-fill-mode: forwards;
   position: relative;
   left: 0px;
   opacity: 0;
 }
+
+
 
 #sub_contenido-2{
   padding: 10px;
@@ -80,6 +129,9 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  -webkit-display: flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: space-around;
 }
 #img_secundaria-1 ,
 #img_secundaria-2 {
@@ -97,6 +149,8 @@ footer{
   margin-top: 10px;
   transition-property: transform;
   transition-duration: 1s;
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 1s;
 }
                   /*Footer*/
 .footer_contenedor{
@@ -104,6 +158,9 @@ footer{
   display: flex;
   flex-direction: row;
   border-radius: 0px 0px 10px 10px;
+  -webkit-display: flex;
+  -webkit-flex-direction: row;
+  -webkit-border-radius: 0px 0px 10px 10px;
   background-color: #C6d5c5;
   font-family: roboto;
 
@@ -139,11 +196,11 @@ footer{
 
 
 
-
-                    /*Pseudo-clase hover*/
+/******************Pseudo-clases***************/
 nav ul li:hover{
   background-color: #409FC5;
 }
+
 #img_secundaria-1>img:hover{
   transform: rotate(10deg);
   border:2px;
@@ -158,9 +215,23 @@ nav ul li:hover{
   background-color: #AEB6B9;
   border-radius: 5px;
 }
-/*Fin de la Pseudo-clase hover*/
+.contenedor_paisajes>div:nth-child(1){
+  filter: blur(10px);
+}
+.contenedor_paisajes>div:nth-child(3){
+  filter: sepia(90%);
+}
+.contenedor_paisajes>div:nth-child(even)>img{
+  filter: grayscale(100%);
+}
+nav ul li:nth-child(1){
+  background-color:   #409FC5;
+}
 
-/*@keyframes*/
+
+/*Fin de la Pseudo-clases*/
+
+/*********************@keyframes*********************/
 @-webkit-keyframes view_img_prin{
   0%{
 
@@ -185,9 +256,10 @@ nav ul li:hover{
     margin-top: 0%;
   }
 }
-/**/
 
-/*Media Querie*/
+/************************************************/
+
+/******************Media Querie*****************/
 @media all and (max-width:900px) {
   #main{
     width:100%;
@@ -214,6 +286,24 @@ nav ul li:hover{
     border-bottom: 1px solid white;
 
   }
+  .contenedor_paisajes{
+    flex-direction: column;
+  }
+  .paisaje{
+    width: 90%;
+  }
+  .contenedor_retratos{
+    flex-direction: column;
+  }
+  .retrato{
+    width: 100%;
+  }
 
 
+}
+
+@media all and (max-width:320px){
+  header h1{
+    font-size: 1em;
+  }
 }
